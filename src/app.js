@@ -1,15 +1,17 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 
 const app = express();
 const router = express.Router();
 
-const route = router.get('/', (req, res, next) => {
-    res.status(200).send({
-        title: 'node store api',
-        version: '0.0.2'
-    })
-})
+// load routes
+const index = require('./routes/index');
+const product = require('./routes/product');
 
-app.use('/', route);
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+
+app.use('/', index);
+app.use('/products', product);
 
 module.exports = app;
