@@ -11,10 +11,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
     "body-parser": "^1.18.2",
     "debug": "^3.1.0",
     "express": "^4.16.3",
     "guid": "0.0.12",
+    "md5": "^2.2.1",
     "mongoose": "^5.1.0"
   },
   "devDependencies": {

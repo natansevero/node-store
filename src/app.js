@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const config = require('./config');
 
 const app = express();
-const router = express.Router();
 
 // connection database
 mongoose.connect(config.connectionString)
