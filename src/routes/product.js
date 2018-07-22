@@ -8,8 +8,8 @@ router.get('/:slug', controller.getBySlug);
 router.get('/admin/:id', controller.getById);
 router.get('/tags/:tag', controller.getByTag);
 // Route with auth
-router.post('/', authService.authorize, controller.post);
-router.put('/:id',  authService.authorize, controller.put);
-router.delete('/:id', authService.authorize, controller.delete);
+router.post('/', authService.isAdmin, controller.post);
+router.put('/:id',  authService.isAdmin, controller.put);
+router.delete('/:id', authService.isAdmin, controller.delete);
 
 module.exports = router; 

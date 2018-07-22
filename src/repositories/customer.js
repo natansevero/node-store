@@ -13,3 +13,7 @@ exports.authenticate = async (data) => {
     })
     return res;
 } 
+
+exports.getById = async (id) => {
+    return await Customer.findById(id)
+} 
